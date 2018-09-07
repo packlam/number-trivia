@@ -11,10 +11,9 @@ const naturalLanguageUnderstanding = new NaturalLanguageUnderstandingV1({
   url: 'https://gateway.watsonplatform.net/natural-language-understanding/api'
 });
 
-const handleNumber = (req, res, next) => {
+const handleNumber = (req, res) => {
   const number = parseInt(req.query.number);
-
-  if (req.query.number === undefined) {
+  if (!/^\d+$/.test(req.query.number)) {
     res.render('index');
   } else {
     axios.get(`http://numbersapi.com/${number}`)

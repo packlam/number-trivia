@@ -34,12 +34,13 @@ const handleNumber = (req, res, next) => {
           console.log(giphyKeyword);
           axios.get(`http://api.giphy.com/v1/gifs/search?api_key=${giphyAPIkey}&q=${giphyKeyword}&limit=1`)
             .then(responseGiphy => {
-              console.log(responseGiphy.data.data[0].images.fixed_width.url);
+              console.log(responseGiphy.data.data[0].images.original.url);
               const dataToRender = {
                 number,
                 fact: responseTrivia.data,
                 keyword: responseWatson.keywords[0].text,
-                gifURL: responseGiphy.data.data[0].images.fixed_width.url
+                // gifURL: responseGiphy.data.data[0].images.fixed_width.url
+                gifURL: responseGiphy.data.data[0].images.original.url
               }
               res.render('display', { dataToRender });
             })

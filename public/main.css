@@ -1,18 +1,93 @@
 body {
-  background-color: lavender;
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #A7CECD;
+  font-family: "Lucida Console", Monaco, monospace;
+  color: #024752;
+}
+
+#container {
+  width: 500px;
+  margin: 0 auto;
+}
+
+#logo-div {
+  margin: 0 auto;
+  margin-bottom: 20px;
+  width: 450px;
+}
+
+#logo {
+  width: 450px;
+}
+
+#search-box {
+  margin: 0 auto;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 18pt;
+  font-weight: bold;
+}
+
+input[type=number] {
+  padding: 11px 11px;
+  display: inline-block;
+  border: 2px solid #024752;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-left: 10px;
+}
+
+input[type=submit] {
+  background-color: #A7CECD;
+  color: #024752;
+  padding: 8px 8px;
+  margin-left: 20px;
+  border: 2px solid #024752;
+  border-radius: 5px;
+  font-family: "Lucida Console", Monaco, monospace;
+  font-size: 14pt;
+}
+
+#sorry {
+  margin: 0 auto;
+  margin-top: 50px;
+  text-align: center;
+  font-size: 14pt;
 }
 
 .box {
-  border: 5px solid slategrey;
+  border: 5px solid #024752;
   border-radius: 10px;
   display: inline-block;
-  padding: 10px;
-  margin: 10px;
-  width: 200px;
+  padding: 20px 10px 20px 10px;
+  margin: 0 auto;
+  width: 470px;
 }
 
 #number {
-  font-size: 64pt;
+  font-size: 90pt;
   font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#gif {
+  width: 470px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+#fact {
+  text-align: center;
+  font-size: 16pt;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#giphy {
+  width: 400px;
+  text-align: center;
+  font-size: 10pt;
+  margin: 0 auto;
 }

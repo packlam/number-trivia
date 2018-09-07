@@ -1,19 +1,22 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Number Trivia!</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" media="screen" href="/main.css" />
-</head>
-<body>
-  <div class="box center-div">
-    <div id="number"><center><%= dataToRender.number %></center></div>
-    <img src="<%= dataToRender.gifURL %>">
-    <p>Fun Fact: <%= dataToRender.fact %></p>
-    <p>Giphy Keyword: <%= dataToRender.keyword %></p>
-    <img src="/giphy-logo.png">
-  </div>
-</body>
+<%- include('partials/head') %>
+  <body>
+    <div id="container">
+      <%- include('partials/logo-and-search') %>
+      <div class="box">
+        <div id="number">
+          <%= dataToRender.number %>
+        </div>
+        <div>
+          <img id="gif" src="<%= dataToRender.gifURL %>">
+        </div>
+        <div id="fact">
+          <b>Fun Fact:</b> <%= dataToRender.fact %>
+        </div>
+        <div id="giphy">
+          "<%= dataToRender.keyword %>"
+          <p><img src="/giphy-logo.png"></p>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

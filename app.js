@@ -12,4 +12,6 @@ app.get('/', (req, res) => res.render('index'));
 
 app.get('/api', handleNumber);
 
+app.use('/*', (req, res) => res.status(404).render('invalid-route'));
+
 module.exports = app;

@@ -8,6 +8,8 @@ app.use(bodyParser.json());
 app.use(express.static('public'));
 
 
-app.get('/api/:number', handleNumber);
+app.get('/', (req, res) => res.render('index'));
+
+app.get('/api', handleNumber);
 
 module.exports = app;
